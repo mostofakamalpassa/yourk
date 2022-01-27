@@ -36,7 +36,7 @@
 
 		<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
 		 <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-		<a href="#" class="google"><i class="fa fa-google"></i></a>
+		<!-- <a href="#" class="google"><i class="fa fa-google"></i></a> -->
 		<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
 		<a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
 		
@@ -109,6 +109,42 @@
 		</div>
 	</nav>
 	<!-- END nav -->
+
+	<!-- Doctor id Open-->
+	<div class="another-open-close"><div class="icon-open" id="icon_open"></div></div>
+	<!-- Find Doctors-->
+	<section class="find-doctor">
+		<h5 role="button" id="close_id" class="close-button doctor-text-indent">Close</h5>
+		<h3 class="doctor-button" id="find_doctor_id">Find Doctors</h3>
+		<form action="#" class="doctor-text-indent">
+	
+			<div class="input-group mb-3">
+				<div class="input-group-prepend">
+				  <label class="input-group-text" for="inputGroupSelect01">Department</label>
+				</div>
+				<select class="custom-select" id="inputGroupSelect01">
+					<option value="">Select Department</option>
+					<option value="Cardiology">Cardiology</option>
+					<option value="Cardiology">Child Specialty</option>
+					<option value="Cardiology">Dermatology</option>
+					<option value="Cardiology">Dental Surgeon</option>
+				</select>
+			  </div>
+
+
+			<input type="text" list="doctors" class="form form-control form-control-sm" name="doctors" id="docotr">
+			<input type="button" class="btn btn-primary btn-lg rounded mt-2" value="Search">
+			<datalist id="doctors">
+				<a href="">	<option value="Prof. Dr. Selina Akter"></a>
+				<a href="">	<option value="Dr.Sk.Serjina Akter"></a>
+				<a href="">	<option value="Dr.Wahida Khan Chowdhury"></a>
+				<a href="">	<option value="fff"></a>
+				
+			</datalist>
+		</form>
+		
+
+	</section>
 
 	<section class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');"
 		data-stellar-background-rati="0.5">
@@ -194,8 +230,8 @@
 									<div class="media-body pl-md-4">
 										<h3 class="heading mb-3">Emergency Help</h3>
 										<p class="con"><span>Call Us Now 24/7 Customer Support<br> <a href="tel:+880 199 2222
-											555">+880 199 2222
-											555</a> <br> <a href="tel:+880 199 2222 777">+880 199 2222 777</a> </span></p>
+											555">+88 02 41 080 439</a> <br> 
+											<a href="tel:+880 199 2222 777">+88 02 41 080 540</a> </span></p>
 									</div>
 								</div>
 							</div>
@@ -232,54 +268,60 @@
 						<form action="#" class="appointment-form ftco-animate">
 							<h3 class="pt-1 text-capitalize">Appointment Form</h3>
 							<div class="">
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="First Name">
+								<div class="form-group errorM">
+									<input type="text" id="firstName" class="form-control" placeholder="First Name">
 								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Last Name">
+								<div class="form-group errorM">
+									<input type="text" id="lastName" class="form-control" placeholder="Last Name">
 								</div>
 							</div>
 							<div class="" id="appointment-1">
-								<div class="form-group">
+								<div class="form-group errorM">
 									<div class="form-field">
 										<div class="select-wrap">
 											<div class="icon"><span class="fa fa-chevron-down"></span></div>
-											<select name="" id="" class="form-control">
+											<select name="" id="department" class="form-control">
 												<option value="">Select Your Services</option>
-												<option value="">Neurology</option>
-												<option value="">Cardiology</option>
-												<option value="">Dental</option>
-												<option value="">Ophthalmology</option>
-												<option value="">Other Services</option>
+												<option value="Neurology">Neurology</option>
+												<option value="Cardiology">Cardiology</option>
+												<option value="Dental">Dental</option>
+												<option value="Ophthalmology">Ophthalmology</option>
+												<option value="Other Services">Other Services</option>
 											</select>
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Phone">
+								<div class="form-group errorM">
+									<input type="text" id="phone" class="form-control" placeholder="Phone">
 								</div>
 							</div>
 							<div class="">
-								<div class="form-group">
+								<div class="form-group errorM">
 									<div class="input-wrap">
 										<div class="icon"><span class="fa fa-calendar"></span></div>
-										<input type="text" class="form-control appointment_date" placeholder="Date">
+										<input type="text" id="appointmentDate" class="form-control appointment_date" placeholder="Date">
 									</div>
 								</div>
-								<div class="form-group">
+								<div class="form-group errorM">
 									<div class="input-wrap">
 										<div class="icon"><span class="fa fa-clock-o"></span></div>
-										<input type="text" class="form-control appointment_time" placeholder="Time">
+										<input type="text" id="appointmentTime" class="form-control appointment_time" placeholder="Time">
 									</div>
 								</div>
 							</div>
 							<div class="">
-								<div class="form-group">
-									<textarea name="" id="" cols="30" rows="2" class="form-control"
+								<div class="form-group errorM">
+									<textarea name="" id="message" cols="30" rows="2" class="form-control"
 										placeholder="Message"></textarea>
 								</div>
 								<div class="form-group">
-									<input type="submit" value="Book an Appointment" class="btn btn-secondary py-3 px-4">
+									<input type="button" id="submitAppointment"  value="Book an Appointment" class="btn btn-secondary py-3 px-4">
+								</div>
+								<div class="message-appointments alert-success">
+									<h5 class="text-secondary p-1 text-center">Your Appointment Has been Success</h5>
+								</div>
+								<div class="message-appointments alert-danger error">
+									<h5 class="text-secondary text-center p-1">Your Appointment not success</h5>
 								</div>
 							</div>
 						</form>
@@ -355,7 +397,7 @@
 
 								<div class="faded">
 									<p>
-										Your Text
+										
 									</p>
 
 								</div>
@@ -373,7 +415,8 @@
 								<h3 class="mb-2">Dental Clinic</h3>
 
 								<div class="faded">
-									<p>Your Text
+									<p>
+									
 									</p>
 
 								</div>
@@ -392,7 +435,7 @@
 								<h3 class="mb-2">Neurology</h3>
 
 								<div class="faded">
-									<p>Your Text
+									<p>
 									</p>
 
 								</div>
@@ -411,7 +454,7 @@
 								<h3 class="mb-2">Nuclear Magnetic</h3>
 
 								<div class="faded">
-									<p>Your Text
+									<p>
 									</p>
 
 								</div>
@@ -431,7 +474,7 @@
 								</h3>
 
 								<div class="faded">
-									<p>Your Text
+									<p>
 									</p>
 
 								</div>
@@ -449,7 +492,7 @@
 							</div>
 							<div class="text text-center">
 								<h3 class="mb-2">Surgical</h3>
-								<p>Your Text</p>
+								<p></p>
 
 							</div>
 						</div>
@@ -464,7 +507,7 @@
 							</div>
 							<div class="text text-center">
 								<h3 class="mb-2">X-Ray</h3>
-								<p>Your Text</p>
+								<p></p>
 
 							</div>
 						</div>
@@ -491,11 +534,9 @@
 				</div> -->
 				<div class="carousel-doctor-consultation owl-carousel">
 					<div class="item">
-
-
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/Selina.png);">
+								<div class="img align-self-stretch" style="background-image: url(images/Prof-Dr-Selina-Akter.png);">
 								</div>
 							</div>
 							<div class="text text-center">
@@ -512,26 +553,33 @@
 											Professor of Gynaecology and Obstetrics
 											Shaheed Monsur Ali Medical College & Hospital
 										</p>
+									
+										
 									</div>
 								</div>
 
-								<div class="social-site">
+								<!-- <div class="social-site">
 									<ul class="ftco-social text-center">
 										<li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
 													class="fa fa-twitter"></span></a></li>
 										<li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-facebook"></span></a></li>
-										<li class="ftco-animate"><a href="#"
+													class="fa fa-facebook"></span></a></li> -->
+										<!-- <li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-google"></span></a></li>
-										<li class="ftco-animate"><a href="#"
+													class="fa fa-google"></span></a></li> -->
+										<!-- <li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
 													class="fa fa-instagram"></span></a></li>
 									</ul>
-								</div>
+								</div> -->
+								
 							</div>
+							<div class="read-more p-2 position-absolute">
+								<button  data-toggle="modal" data-target="#exampleModalLong" class="btn btn-lg btn-primary">Read More</button>
+							</div>
+							
 						</div>
 
 					</div>
@@ -579,7 +627,7 @@
 					<div class="item">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/Wahida.jpg);">
+								<div class="img align-self-stretch" style="background-image: url(images/Wahida.png);">
 								</div>
 							</div>
 							<div class="text text-center">
@@ -619,7 +667,7 @@
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch"
-									style="background-image: url(images/Shahriar-Kollol.jpg);"></div>
+									style="background-image: url(images/Shahriar-Kollol.png);"></div>
 							</div>
 							<div class="text text-center">
 								<div class="doctor-text">
@@ -655,20 +703,33 @@
 
 						</div>
 					</div>
+
+				
+
+					<!--=============== item start ===============-->
 					<div class="item">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch"
-									style="background-image: url(images/Mahmuduzzaman.png);"></div>
+									style="background-image: url(images/Prof-Dr-Bilkis-Parveen.png);"></div>
 							</div>
 							<div class="text text-center">
-								<h3 class="mb-2 doctor-font-size">Prof. Dr. Mahmuduzzaman
-								</h3>
-								<span class="position mb-2 degination-text">MBBS, MD (Gastroenterology)
+								<div class="doctor-text">
+								<h3 class="mb-2 doctor-font-size">Prof. Dr. Bilkis Parvin</h3>
+								<span class="position mb-2 degination-text">
+									Laparoscopic Surgeon and Infertility Specialist
+
 								</span>
+								<p>MBBS, DGO, FCPS (Gynae & Obs)
+									Professor of Gynaecology and Obstetrics
+									MH Samorita Medical College & Hospital
+									Obstetrician and Gynaecologist
+								</p>
+							</div>
+
+
 								<div class="faded">
-									<p>Professor, (Gastroenterology), Shaheed Suhrawardy Medical College
-									</p>
+								
 									<ul class="ftco-social text-center">
 										<li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
@@ -688,17 +749,32 @@
 
 						</div>
 					</div>
+					<!--=============== item End ===============-->
+
+
+					<!--=============== item start ===============-->
 					<div class="item">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
 								<div class="img align-self-stretch"
-									style="background-image: url(images/Masfiqul-Hasan2.jpg);"></div>
+									style="background-image: url(images/Q-E-F.png);"></div>
 							</div>
 							<div class="text text-center">
-								<h3 class="mb-2 doctor-font-size">Dr. Masfiqul Hasan</h3>
-								<span class="position mb-2 degination-text">Neurologist</span>
+								<div class="doctor-text">
+								<h3 class="mb-2 doctor-font-size">Prof. Dr. Quorrata Eynul Forhad Rodia</h3>
+								<span class="position mb-2 degination-text">
+									Infertility Specialist & Laparoscopic Surgeon Obstetrician and Gynaecologist
+
+								</span>
+								<p>MBBS, FCPS (Gynae & Obs)
+									Professor & Dept. Head of Gynaecology and Obstetrics
+									Shahabuddin Medical College & Hospita
+								</p>
+							</div>
+
+
 								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+								
 									<ul class="ftco-social text-center">
 										<li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
@@ -719,18 +795,33 @@
 						</div>
 					</div>
 
+					<!--=============== item End ===============-->
+
 					<!--=============== item start ===============-->
 					<div class="item">
 						<div class="staff">
 							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/doc-1.jpg);">
-								</div>
+								<div class="img align-self-stretch"
+									style="background-image: url(images/Faria-Rashid.png);"></div>
 							</div>
 							<div class="text text-center">
-								<h3 class="mb-2 doctor-font-size">Dr. Lloyd Wilson</h3>
-								<span class="position mb-2 degination-text">Neurologist</span>
+								<div class="doctor-text">
+								<h3 class="mb-2 doctor-font-size">Dr. Faria Rashid</h3>
+								<span class="position mb-2 degination-text">
+									Obstetrician and Gynaecologist, Laparoscopic Surgeon and Infertility Specialist
+
+								</span>
+								<p>MBBS, FCPS (Obs & Gynaecology)
+									Trained in Infertility Management (India)
+									Associate Professor and Head
+									Department of Obs and Gynae
+									Aichi Medical College and Hospital
+								</p>
+							</div>
+
+
 								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
+								
 									<ul class="ftco-social text-center">
 										<li class="ftco-animate"><a href="#"
 												class="d-flex align-items-center justify-content-center"><span
@@ -752,72 +843,1068 @@
 					</div>
 					<!--=============== item End ===============-->
 
-
-					<!--=============== item start ===============-->
-					<div class="item">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/doc-1.jpg);">
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Nusrat-taranum.png);"></div>
 								</div>
-							</div>
-							<div class="text text-center">
-								<h3 class="mb-2 doctor-font-size">abcd</h3>
-								<span class="position mb-2">Neurologist</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-twitter"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-facebook"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-google"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-instagram"></span></a></li>
-									</ul>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Naushaba Tarannum Mahtab</h3>
+									<span class="position mb-2 degination-text">
+										Chest Diseases & Respiratory Medicine
+	
+									</span>
+									<p>
+										MBBS, FCPS (Obs & Gynae)
+										Assistant Professor, BIRDEM General Hospital
+										& Ibrahim Medical College
+										Obstetrician and Gynaecologist, Laparoscopic Surgeon
+									</p>
 								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
 							</div>
-
 						</div>
-					</div>
-					<!--=============== item End ===============-->
-
-					<!--=============== item start ===============-->
-					<div class="item">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/doc-1.jpg);">
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
 								</div>
-							</div>
-							<div class="text text-center">
-								<h3 class="mb-2">12345</h3>
-								<span class="position mb-2">Neurologist</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-twitter"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-facebook"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-google"></span></a></li>
-										<li class="ftco-animate"><a href="#"
-												class="d-flex align-items-center justify-content-center"><span
-													class="fa fa-instagram"></span></a></li>
-									</ul>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Timir Kumar Debnath</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MCPS, FCPS (ENT) Specialized ENT Hospital, SAHIC, Mohakhali, Dhaka
+	
+									</span>
+									<p>
+										ENT, Head & Neck Specialist & Surgeon
+									</p>
 								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
 							</div>
-
 						</div>
-					</div>
-					<!--=============== item End ===============-->
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size"> Dr. Md. Delwar Hossain</h3>
+									<span class="position mb-2 degination-text">
+										MBBS (Dhaka), MS (Thoracic Surgery)
+										Assistant Professor
+										National Institute of Diseases of the Chest & Hospital
+	
+									</span>
+									<p>
+										Chest Disease and Esophageal Specialist Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/BIju.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Asifur Rahman Bijou</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MS (Neurosurgery)
+										Trained in Micro-neurosurgery (Turkey, Germany & India)
+										Associate Professor, Department of Neuro Surgery
+										Bangabandhu Sheikh Mujib Medical University
+	
+									</span>
+									<p>
+										Brain & Spine Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Mafiun-Nafisa-Huq-2.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Mafiun Nafisa Huq</h3>
+									<span class="position mb-2 degination-text">
+										BDS (DU), MPH (Epidemiology), USAID Fellow
+Special Training on Aesthetic, Laser Dentistry
+Training on Implant from University of South California, USA
+	
+									</span>
+									<p>
+										Dental Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Jarin-Sultana-Sanramoni.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Jarin Sultana Sanramoni</h3>
+									<span class="position mb-2 degination-text">
+										MBA & BBA in HRM
+Neuro Linguistic Programming, CBT for
+Depression, Stress, Anxiety & PTSD (UK Board)
+	
+									</span>
+									<p>
+										Mental Health, Depression & Relationship Coach
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Younus-Zamal.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Prof. Dr. AKM Younus Zamal</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, M. Phil (Pathology)
+Professor of Pathology
+Universal Medical College, Mohakhali, Dhaka
+	
+									</span>
+									<p>
+										Consultant, Pathology
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Nasreen-Nahar.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Nasreen Nahar</h3>
+									<span class="position mb-2 degination-text">
+										MBBS (Rajshahi), M.Phil (BSMMU)
+	
+									</span>
+									<p>
+										Consultant, Pathology
+										York Hospital Ltd.
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Asif Ahmad</h3>
+									<span class="position mb-2 degination-text">
+										B.Sc & M.Sc in Biochemistry & Molecular Biology (DU)
+PhD student, Dept. of Biochemistry & Molecular Biology (JU)
+	
+									</span>
+									<p>
+										Consultant, Biochemistry
+York Hospital Limited
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Nasreen-Huda.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Nasreen Huda</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, M. Phil (BSMMU)
+Associate Professor, Department Head (Microbiology)
+Shahabuddin Medical College and Hospital
+	
+									</span>
+									<p>
+										Consultant, Microbiology
+										York Hospital Ltd.
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Enamul Haque</h3>
+									<span class="position mb-2 degination-text">
+										MBBS (Sri Lanka), Fellowship in Transplant
+Nephrology, FCGP
+Chief Medical Officer, York Hospital Ltd.
+	
+									</span>
+									<p>
+										Family Medicine Specialist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Ikram-A-Rahman.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Iqram A. Rahman</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, D. Ortho (Austria)
+Ex Associate Professor
+Holy Family Red Crescent Medical College & Hospital
+	
+									</span>
+									<p>
+										Orthopaedics & Trauma Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Ananta-Kumar.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Ananta Kumar Sen</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, D. Ortho, MS (Ortho)
+Associate Professor & Head
+Department of Orthopaedic Surgery
+US Bangla Medical College & Hospital
+									</span>
+									<p>
+										Orthopaedics & Trauma Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Abdullah - Al - Quayyum</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MD (Hepatology)
+										Hepatologist and Therapeutic Endoscopist
+										Sheikh Russel National Gastroliver Institute & Hospital
+									</span>
+									<p>
+										Liver Diseases, Gastroenterology & Internal
+Medicine Specialist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Appolo.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Al Mahmood Appolo</h3>
+									<span class="position mb-2 degination-text">
+										MBBS (DMC), BCS (Health), MD (Gastroenterology)
+Resident Physician, Sheikh Russel National
+Gastroliver Institute & Hospita
+									</span>
+									<p>
+										Gastroenterology & Liver Diseases Specialist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Mahmuduzzaman.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Prof. Dr. Mohammad Mahmuduzzaman</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MD (Gastroenterology)
+										Professor and Head
+										Department of Gastroenterology
+										Shaheed Suhrawardy Medical College & Hospital
+									</span>
+									<p>
+										Liver Diseases, Gastroenterology & Internal
+Medicine Specialist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Firoz-Khan.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Prof. Dr. Firoz Khan</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MD (Nephrology), FRCP (London)
+Professor & Ex Head, Department of Nephrology
+									</span>
+									<p>
+										Dhaka Medical College & Hospital
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Iftequar-Alam.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Iftequar Alam</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, D-Card (BSMMU), MD (Cardiology)
+Consultant
+National Institute of Cardiovascular Diseases
+									</span>
+									<p>
+										Medicine & Heart Diseases Specialist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Nazrul-Islam.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Md. Nazrul Islam</h3>
+									<span class="position mb-2 degination-text">
+										PhD in Microbiology (DU), MSc & BSc in Microbiology (DU)
+Senior Scientific Officer, Clinical Microbiology and Immunology
+Laboratory, LSSD, ICDDR, B.
+									</span>
+									<p>
+										Consultant, Microbiology
+York Hospital Ltd.
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">S M Zahidul Islam</h3>
+									<span class="position mb-2 degination-text">
+										BSPT (Hons') DU-Medicine Faculty
+Dip Orthopaedic Medicine (Belgium)
+PG Diploma Musculoskeletal Medicine (Queen Margaret, UK)
+COMT, DMT (USA), Team Physio - Comilla Victorians
+Co ordinator, Department of Physiotherapy & Rehab
+									</span>
+									<p>
+										Consultant Physiotherapist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Sayeef-Ibn-Kayes.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Saeef Bin Kayes</h3>
+									<span class="position mb-2 degination-text">
+										BPT (DU), PG Diploma in Exercise Physiology
+										York Hospital Ltd
+									</span>
+									<p>
+										Consultant Physiotherapist
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Shahryar Nabi</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, M. Phil, MD (Radiology & Imaging)
+Special Training in Neuro-Radiology
+(PGIMER, Chandigarh, India)
+Associate Professor
+Dhaka Medical College & Hospital
+									</span>
+									<p>
+										Radiology & Imaging Department
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Setabur-Rahman.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Md. Setabur Rahman</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, MS (Surgery)
+Associate Professor & Head
+Department of Surgical Oncology
+National Institute of Cancer Research & Hospital
+									</span>
+									<p>
+										General, Laparoscopic & Cancer Surgeon
+										Breast, Gastro Intestinal & Colorectal Cancer Surgeon
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+						<!--=============== item start ===============-->
+						<div class="item">
+							<div class="staff">
+								<div class="img-wrap d-flex align-items-stretch">
+									<div class="img align-self-stretch"
+										style="background-image: url(images/Papon.png);"></div>
+								</div>
+								<div class="text text-center">
+									<div class="doctor-text">
+									<h3 class="mb-2 doctor-font-size">Dr. Md. Rabiul Karim Khan Papon</h3>
+									<span class="position mb-2 degination-text">
+										MBBS, FCPS (Plastic & Reconstructive Surgery)
+Advanced Training in USA, UK, Singapore, Thailand & India
+Associate Professor, Sheikh Hasina National
+Institute of Burn and Plastic Surgery
+									</span>
+									<p>
+										Specialist in Burn, Plastic & Reconstructive Surgery
+									</p>
+								</div>
+	
+	
+									<div class="faded">
+									
+										<ul class="ftco-social text-center">
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-twitter"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-facebook"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-google"></span></a></li>
+											<li class="ftco-animate"><a href="#"
+													class="d-flex align-items-center justify-content-center"><span
+														class="fa fa-instagram"></span></a></li>
+										</ul>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+						<!--=============== item End ===============-->
+
+
+
 
 
 				</div>
@@ -827,6 +1914,31 @@
 
 		</div>
 	</section>
+
+	<!--Modal Area -->
+
+	<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <img class="w-100" src="./images/single-profiles.jpg" alt="">
+		</div>
+	
+	  </div>
+	</div>
+  </div>
+
+
+
+
+
+
 
 	<section class="ftco-facts img ftco-counter" style="background-image: url(images/bg_3.jpg);">
 		<div class="overlay"></div>
@@ -880,19 +1992,19 @@
 			<div class="row d-flex">
 				<div class="col-lg-4 ftco-animate">
 					<div class="blog-entry">
-						<a href="blog-single.html" class="block-20"
-							style="background-image: url('images/image_1.jpg');">
+						<a href="single-blog.html" class="block-20"
+							style="background-image: url('images/nurse.jpg');">
 						</a>
 						<div class="d-flex">
 							<div class="meta pt-3 text-right pr-2">
-								<div><a href="#"><span class="fa fa-calendar mr-2"></span>Aug. 12, 2020</a></div>
-								<div><a href="#"><span class="fa fa-user mr-2"></span>Admin</a></div>
-								<div><a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span> 3</a></div>
+								<div><a href="#"><span class="fa fa-calendar mr-2"></span>May 12, 2021</a></div>
+								<div><a href="#"><span class="fa fa-user mr-2"></span>York</a></div>
+								<div><a href="#" class="meta-chat"><span class="fa fa-comment mr-2"></span>9</a></div>
 							</div>
 							<div class="text d-block">
-								<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-								<p>News Text</p>
-								<p><a href="blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
+								<h3 class="heading"><a href="#">World Nurse Day</a></h3>
+								<!-- <p>News Text</p> -->
+								<p><a href="single-blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
 										more</a></p>
 							</div>
 						</div>
@@ -912,8 +2024,8 @@
 							</div>
 							<div class="text d-block">
 								<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
-								<p>News Text</p>
-								<p><a href="blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
+								<!-- <p>News Text</p> -->
+								<p><a href="single-blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
 										more</a></p>
 							</div>
 						</div>
@@ -933,7 +2045,7 @@
 							<div class="text d-block">
 								<h3 class="heading"><a href="#">Scary Thing That You Don’t Get Enough Sleep</a></h3>
 								<p>News Text</p>
-								<p><a href="blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
+								<p><a href="single-blog.html" class="btn btn-secondary btn-outline-secondary py-2 px-3">Read
 										more</a></p>
 							</div>
 						</div>
@@ -1037,35 +2149,49 @@
 		<div class="container">
 			<div class="row">
 				<!--===== contact form ===========-->
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xl-6">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.16411512217263!2d90.40823824878049!3d23.79633450677279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7229f1d76f1%3A0x1ad7acd1282e32b2!2sYork%20Hospital!5e0!3m2!1sen!2sbd!4v1605157278831!5m2!1sen!2sbd" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+				<div class="col-lg-8 col-md-6 col-sm-12 col-xl-8">
+					<iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.16411512217263!2d90.40823824878049!3d23.79633450677279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7229f1d76f1%3A0x1ad7acd1282e32b2!2sYork%20Hospital!5e0!3m2!1sen!2sbd!4v1605157278831!5m2!1sen!2sbd" width="500" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
 				</div>
 
 				<!--======= Map Area =========-->
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xl-6">
+				<div class="col-lg-4 col-md-6 col-sm-12 col-xl-4 px-5">
 					
 					<div class="row">
-						<div class="col-md-5 col-sm-6">
+						<div class="col-md-12 col-sm-12">
 							<div class="address-info">
-									<h4 class="text-info font-weight-bold py-0 px-3">Hotline</h4> 
+									<h5 class="text-info font-weight-bold">Emergncy</h5> 
 									<div class="d-flex">
 										<i class="fa fa-phone fa-2x mr-2"></i>
 									<p class="con text-dark">
 										<span><a href="tel:+880
-										199 2222 555" class="purple-color font-weight-bold">+880
-										199 2222 555</a></span>
+										199 2222 555" class="purple-color font-weight-bold">+88 02 41 080 439</a></span>
 										<br><span> <a href="tel:+880 199 2222
-											777" class="purple-color font-weight-bold">+880 199 2222
-											777</a> </span>
+											777" class="purple-color font-weight-bold">+88 02 41 080 540</a> </span>
 											<br><span>Call Us Now 24/7 </span></p>
 									</div>
 							</div>
 						</div>
-						<div class="col-md-7 col-sm-6">
+						<div class="col-md-12 col-sm-12">
+							<div class="address-info">
+									<h5 class="text-info font-weight-bold">Hotline</h5> 
+									<div class="d-flex">
+										<i class="fa fa-phone fa-2x mr-2"></i>
+									<p class="con text-dark">
+										<span><a href="tel:+880
+										199 2222 555" class="purple-color font-weight-bold">+880 199 2222 555</a></span>
+										
+										<br><span> <a href="tel:+880 199 2222 777" class="purple-color font-weight-bold">+880 199 2222 777</a> </span>
+											<br><span>Call Us Now 24/7 </span></p>
+									</div>
+							</div>
+						</div>
+
+
+						<div class="col-md-12 col-sm-12">
 							<div class="address-location">
 								
-								<h4 class="text-info font-weight-bold py-0">Our Location</h4>
+								<h5 class="text-info font-weight-bold py-0">Our Location</h5>
 								<div class="d-flex">
 									<i class="fa fa-map-marker fa-2x pr-2"></i>
 								<p class="con text-dark">
@@ -1088,24 +2214,32 @@
 			<div class="row mr-lg-3 mr-md-3">
 				<div class="col-md-3 col-lg-3 col-sm-6 text-center call-border-left call-border-right call-padding">
 					<a href="#" class="text-white d-block"><span class="fa fa-volume-control-phone fa-2x"></span></a>
-					<a href="tel:+880 199 2222 777 " class="text-white get-map">Call +880 199 2222 777
-					</a>
+					<p class="text-center mb-0 text-white bg-danger font-weight-bolder">Emergency</p>
+					<a href="tel:+880 199 2222 777 " class="text-white get-map">Call +88 02 41 080 439</a>
+					<a href="tel:+880 199 2222 777 " class="text-white get-map d-block">Call +88 02 41 080 540</a>
+				
 					<p class="text-white">Available 24 hours every day</p>
 				</div>
 				<div class="col-md-3 col-lg-3 col-sm-6 text-center call-border-right call-padding">
 					<a href="#" class="d-block  text-white"><span class="fa fa-phone fa-2x"></span></a>
+					<p class="text-center mb-0 bg-danger font-weight-bolder text-white">Hot Line</p>
 					<a class="text-white get-map" href="tel:+880 199 2222 555 ">Call +880 199 2222 555 
 						</a>
-					<p class="text-white">Available 24 hours every day</p>
+						<p class="mt-0 mb-0">
+							<a href="tel:+880 199 2222 777 " class="text-white get-map">Call +880 199 2222 777
+							</a>
+						</p>
+						
+					<p class="text-white mt-0">Available 24 hours every day</p>
 				</div>
 				<div class="col-md-3 col-lg-3 col-sm-6 text-center call-padding call-border-right">
 					<a href="#"><span class="fa fa-envelope-o  text-white fa-2x"></span></a>
-					<h6 class="text-white mt-1">Subscribe to our Newsletter</h6>
+					<p class="text-dark  mt-0 bg-light font-weight-bolder">Subscribe to our Newsletter</p>
 					<a href="#" class="btn btn-sm btn-info text-white">Contact</a>
 				</div>
 				<div class="col-md-3 col-lg-3 col-sm-6 text-center call-border-right call-padding">
 					<a href="#"><span class="fa fa-map-marker text-white fa-2x"></span></a>
-					<p class="text-white mb-1">Map and Directions</p>
+					<p class="text-dark  mt-0 bg-light font-weight-bolder">Map and Directions</p>
 					<a target="_blank" href="https://www.google.com/maps/place/York+Hospital/@23.7963342,90.4061877,17z/data=!4m5!3m4!1s0x3755c7229f1d76f1:0x1ad7acd1282e32b2!8m2!3d23.7963293!4d90.4083764" class="text-white get-map-direction">Get direction</a>
 
 				</div>
@@ -1122,7 +2256,7 @@
 				<div class="icon-bar-footer">
 					<a href="#" class="facebooks"><i class="fa fa-facebook"></i></a>
 					<a href="#" class="twitters"><i class="fa fa-twitter"></i></a>
-					<a href="#" class="googless"><i class="fa fa-google"></i></a>
+					<!-- <a href="#" class="googless"><i class="fa fa-google"></i></a> -->
 					<a href="#" class="linkedins"><i class="fa fa-linkedin"></i></a>
 					<a href="#" class="youtubes"><i class="fa fa-youtube"></i></a>
 				</div>
@@ -1239,7 +2373,7 @@
 	<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
 	</script> -->
 	<!-- <script src="js/google-map.js"></script> -->
-
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="js/main.js"></script>
 
 </body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <title>Sending Mail</title>
+
+</head>
+  
+<body>
+  <form method="post">
+    <input type="button" value="Send Mail"
+        onclick="sendEmail()" />
+  </form>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript">
+  
+
+    function sendEmail() {
+      let department = document.getElementById("department");
+      let firstName = document.getElementById("firstName");
+      let lastName = document.getElementById("lastName");
+      let phone = document.getElementById("phone");
+      let appointmentDate = document.getElementById("appointmentDate");
+      let appointmentTime = document.getElementById("appointmentTime");
+      let message = document.getElementById('message');
+
+      Email.send({
+        //Host: "smtp.gmail.com",
+        SecureToken:"a0e99564-6ccc-4104-9293-5b29f2ebe8cf",
+        //Username: "emsl.mostofakamal@gmail.com",
+        //Password: "mk6683mk*",
+        To: 'mostofa1990mkp@gmail.com',
+        // From: "mostofakamal1990@gmail.com",
+        From: "01720246683@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Send message form mobile numbers ",
+        //a0e99564-6ccc-4104-9293-5b29f2ebe8cf 
+       
+      })
+        .then(function (message) {
+          console.log(message);
+            alert("Mail has been sent successfully")
+          
+        });
+    }
+  </script>
+</body>
+  
+</html> 
